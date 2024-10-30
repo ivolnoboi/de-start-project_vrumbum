@@ -5,7 +5,8 @@ CREATE SCHEMA car_shop;
 
 CREATE TABLE car_shop.clients (
     id SERIAL PRIMARY KEY, /*Автоинкремент для автоматического увеличения и присваивания значений id (PK).*/
-    name VARCHAR NOT NULL, /*Так как имя — это строка переменной длины.*/
+    name VARCHAR NOT NULL, /*varchar, так как в данном поле находится ограниченное количество символов. 
+    И по сравнению с типом text varchar занимает меньше оперативной памяти. */
     phone VARCHAR NOT NULL, /*Телефон может содержать цифры, дефисы, скобки и т.д.*/
     UNIQUE (name, phone)
    );
