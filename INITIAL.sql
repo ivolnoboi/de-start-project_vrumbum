@@ -13,4 +13,5 @@ CREATE TABLE raw_data.sales (
     brand_origin VARCHAR
 );
 
+/*For executing in psql.*/
 \copy raw_data.sales(id, auto, gasoline_consumption, price, date, person_name, phone, discount, brand_origin) FROM 'C:\Temp\cars.csv' CSV HEADER NULL 'null';
